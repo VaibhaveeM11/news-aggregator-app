@@ -1,0 +1,43 @@
+$soft-black:#232B2B;
+*{
+    box-sizing: border-box;
+}
+body{
+    background:$soft-black;
+}
+#btn{
+     padding: 10px;
+     background-color: blueviolet;
+}
+.site-title{
+    color:white;
+    text-align: center;
+    border: 1px solid white;
+    padding: 10px;
+}
+#search{
+    background-color:$soft-black;
+    width: 100%;
+    border: none;
+    border-bottom: 3px solid gray;
+    font-size:1em;
+    padding: 20px;
+    color: lavender;
+}
+.card-containter{
+    display: grid;
+    // grid-template-columns:none;
+    background:#414A4C;
+    border-radius: 10px;
+    width: 300px;
+     height: 400px;
+    &:hover{
+    background: black;
+
+}
+.article-title{
+    color:white;
+}
+.article-description{
+    color: grey;
+}

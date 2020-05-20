@@ -1,2 +1,47 @@
-@import "./reset.css";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 
+body {
+  background: #232B2B;
+}
+
+.site-title {
+  color: white;
+  text-align: center;
+  border: 1px solid white;
+  padding: 10px;
+}
+
+#search {
+  background-color: #232B2B;
+  width: 100%;
+  border: none;
+  border-bottom: 3px solid gray;
+  font-size: 1em;
+  padding: 20px;
+  color: lavender;
+}
+
+.card-containter {
+  display: -ms-grid;
+  display: grid;
+  background: #414A4C;
+  border-radius: 10px;
+  width: 300px;
+  height: 400px;
+}
+
+.card-containter:hover {
+  background: black;
+}
+
+.article-title {
+  color: white;
+}
+
+.article-description {
+  color: grey;
+}
+/*# sourceMappingURL=index.css.map */
