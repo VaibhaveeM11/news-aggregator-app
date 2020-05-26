@@ -5,15 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>News Aggregator</title>
   <link rel="stylesheet" href="styles/index.css">
-</head>
-<body id="view-mode">
-  <!-- User Story 1: -->
-  <!-- When user opens the app, he should be able to view the top headlines fetched by the API -->
-<!-- Additional Feather -->
-<!-- Dark mode & light mode -->
-<button onclick="viewMode()" ondblclick="viewModeChange" id="btn">switch to Light mode</button>
- <div>
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
 
+</head>
+<body>
+   <div>
+    <p id="theme-text">Go to Light Mode</p>
+    <label class="switch">
+      <input type="checkbox"  id="view-theme">
+      <span class="slider round"></span>
+    </label>
+  
+   </div>
+  
   <h1 class="site-title">News Aggregator</h1>
 
  </div>  
@@ -26,29 +30,22 @@
 
     <div class="card-containter">
 
-      <ul id="news-articles">
-<!-- 
-        <li class="article">
-          <img src="" alt="news" class="article-img">
-          <h2 class="article-title">hello</h2>
-          <p class="article-description">asd</p> 
-          <span class="article-author">eew</span>       
-          <a href="" class="article-link">eeee</a>
-
-          </li> -->
-
-    
-      </ul>
+      <ul id="news-articles"></ul>
+ 
     </div>
   <script src="./scripts/index.js"></script>
 </body>
 </html>
 
- <!-- viewMode=()=>{
-    document.getElementById('view-mode').style.backgroundColor='#FAEBD7	';
-       
-             }
-             viewModeChange=()=>{
-                document.getElementById('view-mode').style.backgroundColor='black';
+ 
+            
+            
+            
+            
+  
+            
+            
+            
+            
+            
 
-             } -->
