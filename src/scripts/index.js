@@ -9,56 +9,53 @@ const api ='680b52b3605346e096558d9b316f5ff0';
 // When user opens the app, he should be able to view the top headlines fetched by the API -->
 // Function to Display top News in India
 
-document.getElementById('news-articles');
+let newCard = document.getElementById('news-articles');
 
- function fetchNews(){
-
-           fetch('url')
-
-           .then((res)=>res.json())
-
-           .then((data)=>{               
-                    let output;
-                    data.forEach(function (newsdata) {
-                        output +=`
-               <li class="article">
-
-                        <a href="${newsdata.url}" class="article-link" target="-blank">
-
-                          <img src="${newsdata.urlToimage}" alt="news" class="article-img" >
-
-                          <h2 class="article-title">${newsdata.title}</h2>
-
-                          <p class="article-description">${newsdata.description}</p> 
-
-                          <span class="article-author">${newsdata.author ? newsdata.author:"anon"}</span>  
-
-                          </a>
-             </li>     `;
-            });
-            document.getElementById('news-articles').innerHTML=output;
-           })
+ function getNews(news){               
+       if (news.count>0) {
+          let output;
+          data.forEach(ind => {
+                            output +=`
+                   <li class="article">
+    
+                            <a href="${newsdata.url}" class="article-link" target="_blank">
+    
+                              <img src="${newsdata.urlToimage}" alt="news" class="article-img" >
+    
+                              <h2 class="article-title">${newsdata.title}</h2>
+    
+                              <p class="article-description">${newsdata.description}</p> 
+    
+                              <span class="article-author">${newsdata.author ? newsdata.author:"anon"}</span>  
+    
+                              </a>
+                 </li>     `;
+                });
+                newCard.innerHTML=output;
+            
+       } 
+       else {
+            newCard.innerHTML=`<p class=''not-found'>No article was found based on the search.</p>`;
+       }
+          
      }
 // Function to Fetch data from API
 // Condition 1: Fetch Top 20  Default NEWS
 // Condition 2: Fetch NEWS based on searchvalue
 
-  function fetchNew(SearchInput)
+ async function fetchNews(SearchData='')
   {
-      document.getElementById().innerHTML='<p class="load">New are Loading ...</p>';
-       if (SearchInput='') {
-                fetch('url')
-                .then((res)=>res.json())
-                .then((data)=>{
-                  
-
-                })
-           
+        newCard.innerHTML='<p class="load">New are Loading ...</p>';
+       if (SearchData!='') {
+                   
+           url =`https://newsapi.org/v2/everything?q=${searchData}&apiKey=${api}`;
        } 
        else {
-           
+            url =`https://newsapi.org/v2/top-headlines?country=in&apiKey=${api}`;
        }
-  
+       const resp = await fetch(url);
+       const newsData = await resp.json();
+       fetchNews(newsData);
 
   }
 // Function To take value from user 
@@ -76,29 +73,26 @@ function newsLoader()
        console.log("new loader");
        fetchNews();
   }
-//    Additional Feather 
+
+  (function()
+     {
+     newsLoader();
+     }
+ )();
+//    Additional Feather
     //    <!-- Dark mode & light mode -->
-    
-   let theme = document.getElementById('view-theme').addEventListener('change',changeTheme=(e)=>{
-           (e.target.checked) ? document.body.style.backgroundColor='#232B2B':document.body.style.backgroundColor='#FAEBD7';
+
+   let theme = document.getElementById('view-theme');  //input switch    
+   let themeChange =document.getElementById('bodyTheme'); //    target body element
+
+   theme.addEventListener('change',changeTheme=(e)=>{
+
+     (e.target.checked) ?
+     themeChange.style.backgroundColor='#FAEBD7':themeChange.style.backgroundColor='#232B2B';
+
                 });
      
 
-// // Lite Mode/Dark Mode Toggle Function//
-// document.querySelector("#toggle_action").addEventListener('change',toggle_func)
-
-// function toggle_func(e){
-//   if (e.target.checked)
-//    {
-//     document.documentElement.setAttribute('data-theme', 'lite');
-//     document.querySelector(".toggletxt").innerHTML="Toggle to Dark Mode";
-//     }
-// else
-//    {
-//     document.documentElement.setAttribute('data-theme', 'dark');
-//     document.querySelector(".toggletxt").innerHTML="Toggle to Lite Mode";
-//    }   
-// }
 
 // //Api-Key//
 // const apikey="339b58f0aa7c460fa259944a0681031f";

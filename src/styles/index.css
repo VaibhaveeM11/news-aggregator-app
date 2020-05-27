@@ -9,7 +9,6 @@ body {
 
 #theme-text {
   color: lightgrey;
-  size: 67px;
 }
 
 #btn {
@@ -31,7 +30,7 @@ body {
   border-bottom: 3px solid gray;
   font-size: 1em;
   padding: 20px;
-  color: lavender;
+  color: white;
 }
 
 .card-containter {
@@ -96,7 +95,7 @@ body {
 }
 
 input:checked + .slider {
-  background-color: #FAEBD7;
+  background-color: #ccc;
 }
 
 input:focus + .slider {
