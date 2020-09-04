@@ -1,119 +1,109 @@
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 body {
-  background: #232B2B;
+    padding: 25px ;
+    background-color: white !important;
+    color: black !important;
+    font-size: 25px;
+  }
+  
+  .dark-mode {
+    background-color: black !important;
+    color: white !important;
+  }
+
+/* .button{
+    border-radius: 5px;
+    width: 100px;
+} */
+section.not-found{
+    display: none;
 }
 
-#theme-text {
-  color: lightgrey;
+
+.border{
+    padding-top: 10px !important;
+    padding-right: 5px !important;
+    padding-bottom: 10px !important;
+    padding-left: 5px !important;
+   
+    background-color:lightgray !important;
 }
 
-#btn {
-  padding: 10px;
-  background-color: blueviolet;
+#news-articles{
+display:grid;
+grid-template-columns:450px 450px 450px;
+grid-row-gap:20px;  
 }
 
-.site-title {
-  color: white;
-  text-align: center;
-  border: 1px solid white;
-  padding: 10px;
+.card-body{
+    background-color:black !important;
+    color : white !important;
 }
 
-#search {
-  background-color: #232B2B;
-  width: 100%;
-  border: none;
-  border-bottom: 3px solid gray;
-  font-size: 1em;
-  padding: 20px;
-  color: white;
-}
+#loader { 
+    border: 12px solid #f3f3f3; 
+    border-radius: 50%; 
+    border-top: 12px solid #444444; 
+    width: 70px; 
+    height: 70px; 
+    animation: spin 5s linear infinite; 
+   
+    
+} 
+  
+@keyframes spin { 
+    0%{
+        transform: rotate(50deg);
+        scale: (1);
+        
+    }
+    30%{
+        transform: rotate(100deg);
+        scale: (2);
+    }
+    70%{
+        transform: rotateZ(180deg);
+        scale: (3);
+    }
+    100% { 
+        transform: rotate(360deg); 
+        scale: (4);
+    } 
+} 
+  
+.center { 
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    margin: auto; 
+} 
 
-.card-containter {
-  display: -ms-grid;
-  display: grid;
-  background: #414A4C;
-  border-radius: 10px;
-  width: 300px;
-  height: 400px;
-}
+ .article-author{
+   display: block;
+   text-align: right !important;
+   color: blue;
+} 
 
-.card-containter:hover {
-  background: black;
-}
 
-.article-title {
-  color: white;
-}
 
-.article-description {
-  color: grey;
-}
+.main_card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+    border:1px solid whitesmoke;
+    padding:10px;
 
-/* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 75px;
-  height: 34px;
-}
+  }
+  
+  .main_card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .container_card {
+    padding: 2px 16px;
+  }
 
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 29px;
-  width: 29px;
-  left: 4px;
-  bottom: 4px;
-  background-color: mediumpurple;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #ccc;
-}
-
-input:focus + .slider {
-  -webkit-box-shadow: 0 0 1px #2196F3;
-          box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-/*# sourceMappingURL=index.css.map */
+  .article{
+    padding: 2px 16px;
+  }

@@ -1,50 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>News Aggregator</title>
-  <link rel="stylesheet" href="styles/index.css">
-</head>
-<body id="bodyTheme">
-   <div>
-    <p id="theme-text">Change Mode</p>
-    <label class="switch">
-      <input type="checkbox"  id="view-theme">
-      <span class="slider round"></span>
-    </label>
-  
-   </div>
-  
-  <h1 class="site-title">News Aggregator</h1>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="stylesheet" type="text/css" href="./styles/reset.css">
+        <link rel="stylesheet" type="text/css" href="./styles/index.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        
+    </head>
+         <body>
+        
+           
 
- </div>  
+            <div id="loader" class="center"></div>
 
-  <div class="search-container">
-    <form  class='search-container' action="">
-  <input type="text" name="search" id="search" placeholder="Type and press enter to search..." />
-  <input type="submit"/>
-</form>
-  </div>
+            <div class="border border-warning rounded">
+                <center>
+                <h1>News Aggregator</h1>
+                </center>
+            </div>
+<br>
+            <div>
+               
+                <input id="search"  placeholder="Type and press enter to search..." style="width: 100%;">
+               
+            </div><br><br>
 
-    <div class="news-containter">
+            <section class="not-found">No article was found based on the search.</section>
+           
 
-      <ul id="news-articles"></ul>
- 
-    </div>
-  <script src="./scripts/index.js"></script>
-</body>
+    
+                <!-- <center>
+                <button onclick="search()" class="button" id="fetchData">Search</button>
+                 </center> -->
+            <br>
+       
+            <center>
+            <button onclick="myFunction()">Toggle dark mode</button>
+        </center>
+
+ <br>
+ <hr>
+ <br>
+        <!--Display the news-->
+        <div>
+             <ul id="news-articles"> 
+                
+
+             </ul> 
+
+       </div>
+       
+            
+    
+           
+    
+    
+     
+    
+    
+    
+    
+    
+    
+       <script src="./scripts/index.js"> </script>
+            
+                
+         </body>
 </html>
-
- 
-            
-            
-            
-            
-  
-            
-            
-            
-            
-            
-
